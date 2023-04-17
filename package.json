@@ -1,0 +1,56 @@
+{
+  "name": "opentelemetry-instrumentation-agenda",
+  "version": "0.0.2",
+  "description": "Auto-instrumentation for Agenda",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "lint": "eslint src/ test/ --ext .ts",
+    "prepare": "npm run build",
+    "test": "mocha --require ts-node/register --exit --timeout 10000 test/**/*.test.ts"
+  },
+  "keywords": [
+    "instrumentation",
+    "opentelemetry",
+    "tracing",
+    "agenda"
+  ],
+  "author": "\"Raphael Papazikas\" <raphael.papazikas@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@opentelemetry/api": "^1.3.0",
+    "@opentelemetry/instrumentation": "^0.34.0"
+  },
+  "peerDependencies": {
+    "agenda": "^4"
+  },
+  "devDependencies": {
+    "@opentelemetry/context-async-hooks": "^1.8.0",
+    "@opentelemetry/sdk-trace-base": "^1.8.0",
+    "@opentelemetry/sdk-trace-node": "^1.8.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.13",
+    "@types/shimmer": "^1.0.2",
+    "@types/sinon": "^10.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "agenda": "^4.4.0",
+    "eslint": "^8.38.0",
+    "mocha": "^10.2.0",
+    "sinon": "^14.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.0.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphael-papazikas/opentelemetry-instrumentation-agenda.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raphael-papazikas/opentelemetry-instrumentation-agenda/issues"
+  },
+  "homepage": "https://github.com/raphael-papazikas/opentelemetry-instrumentation-agenda"
+}
